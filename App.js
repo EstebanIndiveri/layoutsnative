@@ -19,15 +19,13 @@ const App = () => {
             source={require('./assets/img/bg.jpg')}
           />
         </View>
-      
       <View>
         <View style={styles.contenedor}>
           <Text style={styles.titulo}>Qué hacer en París</Text>
-        
         <ScrollView
         horizontal
         >
-          <View>
+          <View >
             <Image
               style={styles.ciudad}
               source={require('./assets/img/actividad1.jpg')}
@@ -80,6 +78,38 @@ const App = () => {
             </View>
           </View>
       </View>
+
+      <Text style={styles.titulo}> Hospedajes en LA</Text>
+      <View
+      style={styles.listado}
+      >
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje1.jpg')}
+              />
+            </View>
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje2.jpg')}
+              />
+            </View>
+      <Text style={styles.titulo}> Hospedajes 3 habitaciones</Text>
+
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje3.jpg')}
+              />
+            </View>
+            <View style={styles.listadoItem}>
+              <Image
+                style={styles.mejores}
+                source={require('./assets/img/hospedaje4.jpg')}
+              />
+            </View>
+      </View>
       </View>
       </ScrollView>
     </Fragment>
@@ -103,16 +133,23 @@ const styles = StyleSheet.create({
     width:250,
     height:300,
     marginRight:10,
-    borderRadius:15
+    borderRadius:15,
   },
   mejores:{
     width:'100%',
     height:200,
     marginVertical:5,
     borderRadius:15,
- 
-    
-  }
+  },
+  listado:{
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between',
+    padding:4
+  },
+  listadoItem:{
+    flexBasis:'49%',
+  },
 });
 
 export default App;
